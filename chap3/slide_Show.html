@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body{
+		width: 100%;
+		height: 100%;
+	}
+	.container{
+		width: 100%;
+		height: 100%;
+	}
+	.mySlides {display:none;}
+	.imag{
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;	
+	}
+</style>
+<body>
+<div class="container">
+	<h2 class="">Automatic Slideshow</h2>
+
+	<div class="imag" style="max-width:500px">
+	  <img class="mySlides" src="IMG_2841.jpg" style="width:100%">
+	  <img class="mySlides" src="IMG_2833.jpg" style="width:100%">
+	  <img class="mySlides" src="IMG_2845.jpg" style="width:100%">
+
+	</div>
+	</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
